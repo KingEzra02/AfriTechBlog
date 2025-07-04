@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: #edf0f1;
+    background-color: blue;
 }
 li, a, button {
     font-family: "Montserrat", sans-serif;
@@ -18,20 +18,38 @@ li, a, button {
 }
 
 header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
     display: flex;
-    justify-content:center;
-    align-items: center;
-    background-color: #5A827E;
+    justify-content: center;
+    background: transparent;
+    background-color: #06923E;
 }
 
 .blow_header {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1;
     display: flex;
     align-items: center;
     padding: 50px 20px;
-    background-color: #84AE92;
+    background-color: #D3ECCD;
     justify-content: space-between;
 }
 
+.icons{
+    display: flex;
+    
+}
+
+.icons i {
+    padding: 10px;
+}
 .imgs {
     display: flex;
     justify-content: space-around;
@@ -63,14 +81,14 @@ form {
     background-color: #f1f1f1;
 }
 
-input[type=text], input[type=submit] {
+ form input[type=text], input[type=submit] {
     width: 100%;
     padding: 12px;
 
-}
-nav{
+} 
+/* nav{
     justify-content: center;
-}
+} */
 
 .blow_header input[type=text]{
     padding: 6px;
@@ -80,9 +98,9 @@ nav{
     font-size: 17px;
 }
 
-.blow_header button {
+/* .blow_header.icons i {
     float: left;
-}
+} */
 .logo {
     cursor: pointer;
 }
@@ -105,7 +123,7 @@ nav{
 }
 
 footer {
-    background-color: #5A827E;
+    background-color: #06923E;
     padding: 50px 20px;
     display: flex;
     justify-content: space-between;
@@ -146,4 +164,26 @@ h3 {
     text-decoration: underline;
 }
 
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
 
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
